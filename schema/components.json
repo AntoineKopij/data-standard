@@ -253,7 +253,15 @@
             "shareholding",
             "voting-rights",
             "appointment-of-board",
-            "influence-or-control"
+            "influence-or-control",
+            "rights-to-surplus-assets",
+            "contingent-rights",
+            "senior-managing-official",
+            "settlor-of-trust",
+            "trustee-of-trust",
+            "protector-of-trust",
+            "beneficiary-of-trust",
+            "other-influence-or-control-of-trust"
           ]
         },
         "interestLevel":{
