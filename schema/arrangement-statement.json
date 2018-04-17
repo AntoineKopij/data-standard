@@ -23,12 +23,13 @@
     },
     "arrangementType": {
       "title": "Type",
-      "description": "What kind of entity is this? The 'registeredEntity' code covers any legal entity created through an act of official registration, usually resulting in an identifier being assigned to the entity. The 'legalEntity' code covers other bodies with distinct legal personality (government departments, international institutions etc.).  The 'arrangement' code covers artificial entities, described in the data model for the purpose of associating one or more natural or legal persons together in an ownership or control relationship, but without implying that the parties to this arrangement have any other form of collective legal identity.",
+      "description": "Arrangements are artificial entities that associate one or more natural or legal persons together in an ownership or control relationship, without implying that the parties to this arrangement have any other form of collective legal identity. The 'trust' code covers []. The 'jointShareholding' code covers []. The 'unincorporatedJointVenture' code covers []. The 'contract' code covers [].",
       "type": "string",
       "enum": [
         "trust",
         "jointShareholding",
-        "unincorporatedJointVenture"
+        "unincorporatedJointVenture",
+        "contract"
       ]
     },
     "missingInfoReason": {
