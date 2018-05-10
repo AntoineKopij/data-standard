@@ -3,5 +3,8 @@
   "groupID": "934bdcb5-2638-4d7e-8f24-4a99f95d5509",
   "statementType": "arrangementStatement",
   "arrangementType": "trust",
-  "name": "Example Discretionary Trust"
+  "name": "Example Discretionary Trust",
+  "jurisdiction": {
+    "code": "GB"
+  }
 }
