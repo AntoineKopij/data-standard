@@ -88,5 +88,5 @@
       "$ref": "components.json#/definitions/ReplacesStatement"
     }
   },
-  "required": ["statementID", "statementType", "groupID", "entityType"]
+  "required": ["statementID", "statementType", "groupID", "arrangementType"]
 }
