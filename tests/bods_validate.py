@@ -27,6 +27,7 @@ def schema_path_from_statement(statement):
     schemas = {
         'entityStatement': 'entity-statement.json',
         'personStatement': 'person-statement.json',
+        'arrangementStatement': 'arrangement-statement.json',
         'beneficialOwnershipStatement': 'beneficial-ownership-statement.json',
     }
     statement_type = statement.get('statementType')
