@@ -23,7 +23,7 @@
     },
     "arrangementType": {
       "title": "Type",
-      "description": "Arrangements are artificial entities that associate one or more natural or legal persons together in an ownership or control relationship, without implying that the parties to this arrangement have any other form of collective legal identity. The 'trust' code covers []. The 'jointShareholding' code covers []. The 'unincorporatedJointVenture' code covers []. The 'contract' code covers [].",
+      "description": "Arrangements are artificial entities that associate one or more natural or legal persons together in an ownership or control relationship, without implying that the parties to this arrangement have any other form of collective legal identity. The 'trust' code covers trusts. The 'jointShareholding' code covers joint shareholdings, where two or more natural persons share beneficial ownership rights to the same entity. The 'unincorporatedJointVenture' code covers a business arrangement between two or more entities where beneficial ownership rights are defined in advance but where the joint venture has no legal personality of its own. The 'contract' code covers any legal agreement able to confer beneficial ownership rights on another party.",
       "type": "string",
       "enum": [
         "trust",
