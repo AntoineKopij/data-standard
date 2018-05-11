@@ -39,7 +39,7 @@ def schema_path_from_statement(statement):
     return schema_path
 
 
-def check_ids(statement, entity_statement_ids, person_statement_ids):
+def check_ids(statement, entity_statement_ids, person_statement_ids, arrangement_statement_ids):
     statement_type = statement.get('statementType')
     statement_id = statement.get('statementID')
     if statement_id:
@@ -47,10 +47,17 @@ def check_ids(statement, entity_statement_ids, person_statement_ids):
             entity_statement_ids.add(statement_id)
         elif statement_type == 'personStatement':
             person_statement_ids.add(statement_id)
+        elif statement_type == 'arrangementStatement':
+            arrangement_statement_ids.add(statement_id)
     if statement_type == 'beneficialOwnershipStatement':
-        entity_statement_id = statement.get('subject', {}).get('entity', {}).get('describedByStatement')
-        if entity_statement_id not in entity_statement_ids:
-            raise UnrecognisedStatementID("subject/entity/describedByStatement '{}' does not match any known entities".format(entity_statement_id))
+        if 'entity' in statement.get('subject', {}):
+            entity_statement_id = statement.get('subject', {}).get('entity', {}).get('describedByStatement')
+            if entity_statement_id not in entity_statement_ids:
+                raise UnrecognisedStatementID("subject/entity/describedByStatement '{}' does not match any known entities".format(entity_statement_id))
+        if 'arrangement' in statement.get('subject', {}):
+            arrangement_statement_id = statement.get('subject', {}).get('arrangement', {}).get('describedByStatement')
+            if arrangement_statement_id not in arrangement_statement_ids:
+                raise UnrecognisedStatementID("subject/arrangement/describedByStatement '{}' does not match any known arrangements".format(arrangement_statement_id))
         if 'person' in statement.get('interestedParty', {}):
             person_statement_id = statement.get('interestedParty', {}).get('person', {}).get('describedByStatement')
             if person_statement_id not in person_statement_ids:
@@ -71,8 +78,9 @@ def bods_validate_statement(statement):
 def bods_validate_package(statement_list):
     entity_statement_ids = set()
     person_statement_ids = set()
+    arrangement_statement_ids = set()
     for statement in statement_list:
-        check_ids(statement, entity_statement_ids, person_statement_ids)
+        check_ids(statement, entity_statement_ids, person_statement_ids, arrangement_statement_ids)
         bods_validate_statement(statement)
 
 
@@ -101,9 +109,10 @@ def bods_iter_errors_package(statement_list):
     """
     entity_statement_ids = set()
     person_statement_ids = set()
+    arrangement_statement_ids = set()
     for statement in statement_list:
         try:
-            check_ids(statement, entity_statement_ids, person_statement_ids)
+            check_ids(statement, entity_statement_ids, person_statement_ids, arrangement_statement_ids)
         except UnrecognisedStatementID as e:
             yield e
         yield from bods_iter_errors_statement(statement)
