@@ -16,6 +16,12 @@
     "name": "Alice"
   },
   {
+    "statementID": "3cf76acd-4068-4a6b-a497-9a5b30c0a7e5",
+    "groupID": "75c75901-849d-4d5b-a196-3eb0c75eaf2e",
+    "statementType": "personStatement",
+    "name": "Trent"
+  },
+  {
     "statementID": "46a3d097-4b32-4727-9c0f-b1b99cd88b23",
     "groupID": "75c75901-849d-4d5b-a196-3eb0c75eaf2e",
     "statementType": "personStatement",
@@ -41,6 +47,30 @@
     "interests": [
       {
         "type": "beneficiary-of-trust",
+        "startDate": "2016-04-06"
+      }
+    ]
+  },
+  {
+    "statementID": "bafa174e-7044-4df1-9299-dc681bbf669d",
+    "groupID": "75c75901-849d-4d5b-a196-3eb0c75eaf2e",
+    "statementType": "beneficialOwnershipStatement",
+    "statementDate": "2018-05-11",
+    "subject": {
+      "arrangement": {
+        "type": "arrangementStatement",
+        "describedByStatement": "bfb553e8-408d-4360-a66a-52f9143005e9"
+      }
+    },
+    "interestedParty": {
+      "person": {
+        "type": "personStatement",
+        "describedByStatement": "3cf76acd-4068-4a6b-a497-9a5b30c0a7e5"
+      }
+    },
+    "interests": [
+      {
+        "type": "trustee-of-trust",
         "startDate": "2016-04-06"
       }
     ]
