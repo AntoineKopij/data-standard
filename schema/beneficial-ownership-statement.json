@@ -26,11 +26,15 @@
       "description":"The subject of a beneficial ownership relationship.",
       "properties": {
         "entity": {
-              "$ref": "components.json#/definitions/StatementReference"
-            }
-          },
+          "$ref": "components.json#/definitions/StatementReference"
+        },
+        "arrangement": {
+          "$ref": "components.json#/definitions/StatementReference"
+        }
+      },
       "oneOf": [
-        { "required": [ "entity" ] }
+        { "required": [ "entity" ] },
+        { "required": [ "arrangement" ] }
       ]
     },
     "interestedParty": {
