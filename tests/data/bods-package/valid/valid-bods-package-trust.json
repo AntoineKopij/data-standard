@@ -1,5 +1,21 @@
 [
   {
+  "statementID": "bfb553e8-408d-4360-a66a-52f9143005e9",
+  "groupID": "75c75901-849d-4d5b-a196-3eb0c75eaf2e",
+  "statementType": "arrangementStatement",
+  "arrangementType": "trust",
+  "name": "Example Discretionary Trust",
+  "jurisdiction": {
+    "code": "GB"
+    }
+  },
+  {
+    "statementID": "5302f7bc-80d7-445a-be6b-860395ebd7d5",
+    "groupID": "75c75901-849d-4d5b-a196-3eb0c75eaf2e",
+    "statementType": "personStatement",
+    "name": "Alice"
+  },
+  {
     "statementID": "ca810d4f-6cc9-4a97-8faf-bad0572f2497",
     "groupID": "75c75901-849d-4d5b-a196-3eb0c75eaf2e",
     "statementType": "beneficialOwnershipStatement",
