@@ -26,6 +26,8 @@ def test_valid_statement_json(json_path):
 @pytest.mark.parametrize('json_path', [
     'data/bods-package/valid/valid-bods-package.json',
     'data/bods-package/valid/valid-bods-package-entity-owning-entity.json',
+    'data/bods-package/valid/valid-bods-package-trust.json',
+    'data/bods-package/valid/valid-bods-package-trust-full.json',
     '../examples/flat-serialisation/gb-coh-bods-package.json',
 ])
 def test_valid_package_json(json_path):
