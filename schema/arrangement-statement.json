@@ -10,7 +10,7 @@
       "$ref": "components.json#/definitions/ID"
     },
     "statementType": {
-      "title": "The type of statement. This should always be 'entityStatement'",
+      "title": "The type of statement. This should always be 'arrangementStatement'",
       "description": "What is being described by this statement?",
       "type": "string",
       "enum": ["arrangementStatement"]
@@ -29,17 +29,18 @@
         "trust",
         "jointShareholding",
         "unincorporatedJointVenture",
-        "contract"
+        "contract",
+        "unknownArrangement"
       ]
     },
     "missingInfoReason": {
       "title": "Missing information reason(s)",
-      "description": "For EntityStatements with the type 'anonymousEntity' or 'unknownEntity' this field should contain an explanation of the reason that detailed information on the entity is not provided. This may be a standard descriptive phrase from the source system, or a free-text justification.",
+      "description": "For arrangements with `arrangementType` of 'unknownArrangement' this field should contain an explanation of the reason that detailed information on the arrangement is not provided. This may be a standard descriptive phrase from the source system, or a free-text justification.",
       "type": "string"
     },
     "name": {
       "title": "Name",
-      "description": "The declared name of this entity.",
+      "description": "The declared name of this arrangement.",
       "type": "string"
     },
     "jurisdiction": {
@@ -53,21 +54,21 @@
         "$ref": "components.json#/definitions/Identifier"
       }
     },
-    "foundingDate": {
-      "title": "Created date",
-      "description": "When was this entity founded, created or registered. Please provide as precise a date as possible in ISO 8601 format. When only the year or year and month is known, these can be given as YYYY or YYYY-MM.",
+    "startDate": {
+      "title": "Start date",
+      "description": "When was this arrangement formed, begun, entered into or signed. Please provide as precise a date as possible in ISO 8601 format. When only the year or year and month is known, these can be given as YYYY or YYYY-MM.",
       "type": "string",
       "pattern": "^([\\+-]?\\d{4}(?!\\d{2}\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
     },
-    "dissolutionDate": {
+    "endDate": {
       "title": "End date",
-      "description": "If this entity is no longer active, provide the date on which it was disolved or ceased. Please provide as precise a date as possible in ISO 8601 format. When only the year or year and month is known, these can be given as YYYY or YYYY-MM.",
+      "description": "If this arrangement is no longer active, or is due to end on a date, provide the date on which it ends or is due to end. Please provide as precise a date as possible in ISO 8601 format. When only the year or year and month is known, these can be given as YYYY or YYYY-MM.",
       "type": "string",
       "pattern": "^([\\+-]?\\d{4}(?!\\d{2}\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
     },
     "addresses": {
       "title": "Addresses",
-      "description": "One or more addresses for this entity.",
+      "description": "One or more addresses for this arrangement.",
       "type": "array",
       "items": {
         "$ref": "components.json#/definitions/Address"
