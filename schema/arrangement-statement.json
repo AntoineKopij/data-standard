@@ -54,6 +54,11 @@
         "$ref": "components.json#/definitions/Identifier"
       }
     },
+    "agreement": {
+      "title": "Agreement",
+      "description": "Details of the agreement between interested parties subject bound by the arrangement. This may include classes of beneficiary, assets included, limitations of powers and the purpose where the arrangement is a trust.",
+      "type": "string"
+    },
     "startDate": {
       "title": "Start date",
       "description": "When was this arrangement formed, begun, entered into or signed. Please provide as precise a date as possible in ISO 8601 format. When only the year or year and month is known, these can be given as YYYY or YYYY-MM.",

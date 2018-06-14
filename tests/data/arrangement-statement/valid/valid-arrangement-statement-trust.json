@@ -6,5 +6,6 @@
   "name": "Example Discretionary Trust",
   "jurisdiction": {
     "code": "GB"
-  }
+  },
+  "agreement": "A trust to benefit the current owner of the domain example.com"
 }
