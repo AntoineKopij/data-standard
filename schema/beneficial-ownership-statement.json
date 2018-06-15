@@ -48,6 +48,9 @@
         "person": {
               "$ref": "components.json#/definitions/StatementReference"
             },
+        "arrangement": {
+          "$ref": "components.json#/definitions/StatementReference"
+        },
         "unspecified": {
               "$ref": "components.json#/definitions/Unspecified"
             }
@@ -55,6 +58,7 @@
       "oneOf": [
         { "required": [ "entity" ] },
         { "required": [ "person" ] },
+        { "required": [ "arrangement" ] },
         { "required": [ "unspecified" ]}
       ]
     },
