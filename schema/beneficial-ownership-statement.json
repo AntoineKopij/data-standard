@@ -12,6 +12,11 @@
     "groupID": {
       "$ref": "components.json#definitions/ID"
     },
+    "partOfArrangementDescribedByStatement": {
+      "title": "Part of Arrangement Described by Statement",
+      "description": "Where this beneficial ownership statement is part of an arrangement, the identifier of the statement describing that arrangement.",
+      "$ref": "components.json#definitions/ID"
+    },
     "statementType": {
       "title": "The type of statement. This should always be 'beneficialOwnershipStatement'",
       "description": "What is being described by this statement?",
