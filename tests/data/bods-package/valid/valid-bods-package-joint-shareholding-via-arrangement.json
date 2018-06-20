@@ -1,0 +1,14 @@
+[
+  {
+    "statementID": "d5ab5ec8-7bc4-4d10-a2f2-de6c2e46eceb",
+    "groupID": "d63837ff-d3f1-4134-bf98-54109c677f54",
+    "statementType": "personStatement",
+    "name": "Bob"
+  },
+  {
+    "statementID": "4d9107b6-2e08-4cf1-bff2-8b0255cd9e5c",
+    "groupID": "d63837ff-d3f1-4134-bf98-54109c677f54",
+    "statementType": "personStatement",
+    "name": "Alice"
+  }
+]
