@@ -1,0 +1,21 @@
+{
+  "statementID": "51897f3b-a281-42bb-a0ef-86e03023d1d9",
+  "statementType": "ownershipOrControlStatement",
+  "subject": {
+    "describedByEntityStatement": "a248dc5d-4aca-4e9e-861c-edba17533119"
+  },
+  "interestedParty": {
+    "describedByPersonStatement": "3136d5ac-9069-45ed-9a1c-73f425e5f752"
+  },
+  "interests": [
+    {
+      "type": "beneficiary-of-trust",
+      "interestLevel": "direct",
+      "beneficialOwnershipOrControl": true,
+      "share": {
+        "exact": 100
+      },
+      "startDate": "2016-07-07"
+    }
+  ]
+}
