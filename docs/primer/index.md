@@ -11,7 +11,7 @@ People new to the concept of Beneficial Ownership will want to know [what it is]
 .. toctree::
    :maxdepth: 1
 
-   whatisbo.rst
+   whatisbroken.rst
    whyisbo.rst
    whatisbodata.rst
    whatisthebods.rst
