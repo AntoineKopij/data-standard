@@ -7,8 +7,14 @@ install:
   - "pip install -r requirements_test.txt"
   - "pip install lxml html5lib gevent cchardet"
   - "pip install pylinkvalidator"
+  - "echo 'cd output' > linkchecker.sh"
+  - "echo 'python -m http.server 8000 &' >> linkchecker.sh"
+  - "echo 'sleep 5' >> linkchecker.sh"
+  - "echo 'pylinkvalidate.py --console http://localhost:8080/' >> linkchecker.sh"
+  - "chmod a+x linkchecker.sh"
+
 script:
   - "py.test"
   - "flake8 tests"
   - "sphinx-build docs output"
-  - "cd output; python -m http.server 8000 &  ; sleep 5 ; pylinkvalidate.py --console http://localhost:8080/"
+  - "./linkchecker.sh"
