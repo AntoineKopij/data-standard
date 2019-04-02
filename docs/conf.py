@@ -211,32 +211,22 @@ class JSONValue(LiteralInclude):
         return [nodes.paragraph(string,string)]
 
 
-def setup(app):
-    app.add_directive('json-value', JSONValue)
-    app.add_config_value('recommonmark_config', {
-        #'url_resolver': lambda url: github_doc_root + url,
-        'auto_toc_tree_section': 'Contents',
-        'enable_eval_rst': True
-        }, True)
-    app.add_transform(AutoStructify)
-
+def translate_schema_and_codelists(language='en'):
     # The root of the repository.
     basedir = Path(os.path.realpath(__file__)).parents[1]
-    # The `LOCALE_DIR` from `config.mk`.
+    build_dir = basedir / 'docs' / '_build' / 'html' / language
+    static_dir = build_dir / '_static'
+
     localedir = basedir / 'docs' / 'locale'
-
-    language = app.config.overrides.get('language', 'en')
-
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = 'schema'
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
     codelist_domain = 'codelist'
 
-    build_dir = basedir / 'docs/_build/html'
     schema_source_dir = basedir / 'schema'
     codelist_source_dir = basedir / 'schema' / 'codelists'
-    schema_target_dir = build_dir / language / '_static'
-    codelist_target_dir = build_dir / language / '_static' / 'codelists'
+    schema_target_dir = static_dir
+    codelist_target_dir = static_dir / 'codelists'
 
     translate([
         # The glob patterns in `babel_bods_schema.cfg` should match these filenames.
@@ -244,3 +234,15 @@ def setup(app):
         # The glob patterns in `babel_bods_codelist.cfg` should match these.
         (glob(str(codelist_source_dir / '*.csv')), codelist_target_dir, codelist_domain),
     ], localedir, language, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
+
+
+def setup(app):
+    language = app.config.overrides.get('language', 'en')
+    translate_schema_and_codelists(language)
+    app.add_directive('json-value', JSONValue)
+    app.add_config_value('recommonmark_config', {
+        #'url_resolver': lambda url: github_doc_root + url,
+        'auto_toc_tree_section': 'Contents',
+        'enable_eval_rst': True
+        }, True)
+    app.add_transform(AutoStructify)
