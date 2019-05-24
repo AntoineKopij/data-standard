@@ -257,7 +257,7 @@ def translate_schema_and_codelists(language='en'):
         (glob(str(schema_source_dir / '*.json')), schema_target_dir, schema_domain),
         # The glob patterns in `babel_bods_codelist.cfg` should match these.
         (glob(str(codelist_source_dir / '*.csv')), codelist_target_dir, codelist_domain),
-    ], localedir, language, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
+    ], str(localedir), language, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
 
     print("Translated schema and codelists to {}".format(language))
 
