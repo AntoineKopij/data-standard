@@ -272,8 +272,8 @@ def compile_schema_and_codelists():
     # $ pybabel compile --use-fuzzy -d docs/locale -D codelist
     basedir = Path(os.path.realpath(__file__)).parents[1]
     localedir = basedir / 'docs' / 'locale'
-    subprocess.run(["pybabel", "compile", "--use-fuzzy", "-d", localedir, "-D", "schema"])
-    subprocess.run(["pybabel", "compile", "--use-fuzzy", "-d", localedir, "-D", "codelist"])
+    subprocess.run(["pybabel", "compile", "--use-fuzzy", "-d", str(localedir), "-D", "schema"])
+    subprocess.run(["pybabel", "compile", "--use-fuzzy", "-d", str(localedir), "-D", "codelist"])
 
 # -- Finally, Setup -------------------------------------------------------
 
