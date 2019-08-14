@@ -6,7 +6,7 @@
   "dependencies": {
     "commander": "^2.9.0",
     "json-schema-faker": "^0.4.1",
-    "faker":"3.0.1"
+    "faker": "3.0.1"
   },
   "devDependencies": {},
   "scripts": {
