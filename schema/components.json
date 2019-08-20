@@ -1,7 +1,6 @@
 {
   "id": "components.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "version": "0.2",
   "definitions": {
     "StatementDate": {
       "title": "Statement date",
