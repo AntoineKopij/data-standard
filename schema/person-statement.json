@@ -7,8 +7,7 @@
   "description": "A person statement describes the information known about a natural person at a particular point in time, or from a given submission of information",
   "properties": {
     "statementID": {
-      "$ref": "components.json#/definitions/ID",
-      "propertyOrder": 1
+      "$ref": "components.json#/definitions/ID"
     },
     "statementType": {
       "title": "Statement type",
@@ -17,13 +16,11 @@
       "enum": [
         "personStatement"
       ],
-      "propertyOrder": 2,
       "openCodelist": false,
       "codelist": "statementType.csv"
     },
     "statementDate": {
-      "$ref": "components.json#/definitions/StatementDate",
-      "propertyOrder": 3
+      "$ref": "components.json#/definitions/StatementDate"
     },
     "isComponent": {
       "title": "Is component",
@@ -39,7 +36,6 @@
         "unknownPerson",
         "knownPerson"
       ],
-      "propertyOrder": 4,
       "codelist": "personType.csv",
       "openCodelist": false
     },
@@ -72,8 +68,7 @@
       },
       "required": [
         "reason"
-      ],
-      "propertyOrder": 5
+      ]
     },
     "names": {
       "title": "Names",
@@ -81,8 +76,7 @@
       "type": "array",
       "items": {
         "$ref": "components.json#/definitions/Name"
-      },
-      "propertyOrder": 10
+      }
     },
     "identifiers": {
       "title": "Identifiers",
@@ -90,8 +84,7 @@
       "type": "array",
       "items": {
         "$ref": "components.json#/definitions/Identifier"
-      },
-      "propertyOrder": 20
+      }
     },
     "nationalities": {
       "title": "Nationality",
@@ -99,32 +92,27 @@
       "type": "array",
       "items": {
         "$ref": "components.json#/definitions/Country"
-      },
-      "propertyOrder": 30
+      }
     },
     "placeOfBirth": {
       "title": "Place of birth",
-      "$ref": "components.json#/definitions/Address",
-      "propertyOrder": 40
+      "$ref": "components.json#/definitions/Address"
     },
     "birthDate": {
       "title": "Date of birth",
       "description": "The date of birth for this individual. Please provide as precise a date as possible in ISO 8601 format. When only the year or year and month is known, these can be given as YYYY or YYYY-MM.",
       "type": "string",
-      "pattern": "^([\\+-]?\\d{4}(?!\\d{2}\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$",
-      "propertyOrder": 35
+      "pattern": "^([\\+-]?\\d{4}(?!\\d{2}\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
     },
     "deathDate": {
       "title": "Death date",
       "description": "If this individual is no longer alive, provide their date of death. Please provide as precise a date as possible in ISO 8601 format. When only the year or year and month is known, these can be given as YYYY or YYYY-MM.",
       "type": "string",
-      "pattern": "^([\\+-]?\\d{4}(?!\\d{2}\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$",
-      "propertyOrder": 36
+      "pattern": "^([\\+-]?\\d{4}(?!\\d{2}\b))((-?)((0[1-9]|1[0-2])(\\3([12]\\d|0[1-9]|3[01]))?|W([0-4]\\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\\d|[12]\\d{2}|3([0-5]\\d|6[1-6])))([T\\s]((([01]\\d|2[0-3])((:?)[0-5]\\d)?|24\\:?00)([\\.,]\\d+(?!:))?)?(\\17[0-5]\\d([\\.,]\\d+)?)?([zZ]|([\\+-])([01]\\d|2[0-3]):?([0-5]\\d)?)?)?)?$"
     },
     "placeOfResidence": {
       "title": "Place of residence",
-      "$ref": "components.json#/definitions/Address",
-      "propertyOrder": 50
+      "$ref": "components.json#/definitions/Address"
     },
     "taxResidencies": {
       "title": "Tax residency",
@@ -132,8 +120,7 @@
       "type": "array",
       "items": {
         "$ref": "components.json#/definitions/Country"
-      },
-      "propertyOrder": 55
+      }
     },
     "addresses": {
       "title": "Addresses",
@@ -141,14 +128,12 @@
       "type": "array",
       "items": {
         "$ref": "components.json#/definitions/Address"
-      },
-      "propertyOrder": 60
+      }
     },
     "hasPepStatus": {
       "title": "Politically Exposed Person Status",
       "description": "Is the person described in this statement a politically exposed person? This field should not be used if PEP declarations are not expected as part of this disclosure. If a PEP declaration is expected but missing this field should not be used but the reason for the missing data declared in the pepStatusDetails field.",
-      "type": "boolean",
-      "propertyOrder": 79
+      "type": "boolean"
     },
     "pepStatusDetails": {
       "title": "Politically Exposed Person Status Details",
@@ -156,20 +141,17 @@
       "type": "array",
       "items": {
         "$ref": "components.json#/definitions/PepStatusDetails"
-      },
-      "propertyOrder": 80
+      }
     },
     "publicationDetails": {
       "title": "Publication details",
       "description": "Information concerning the original publication of this statement.",
-      "$ref": "components.json#/definitions/PublicationDetails",
-      "propertyOrder": 85
+      "$ref": "components.json#/definitions/PublicationDetails"
     },
     "source": {
       "title": "Source",
       "description": "The source of information about this person, or of information that supports an unknown or anonymous person statement.",
-      "$ref": "components.json#/definitions/Source",
-      "propertyOrder": 89
+      "$ref": "components.json#/definitions/Source"
     },
     "annotations": {
       "title": "Annotations",
@@ -177,8 +159,7 @@
       "type": "array",
       "items": {
         "$ref": "components.json#/definitions/Annotation"
-      },
-      "propertyOrder": 90
+      }
     },
     "replacesStatements": {
       "$ref": "components.json#/definitions/ReplacesStatements"
