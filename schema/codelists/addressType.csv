@@ -1,4 +1,4 @@
-code,title,description,technical note
+Code,Title,Description,Technical Note
 placeOfBirth,Place of birth,The place where a person was born. This must only be used to describe natural persons. Only a town and country are required.,
 residence,Residential address,An address where someone lives. This must only be used for natural persons.,
 registered,Registered address,An official address for delivering statutory mail and legal notices which must be provided to company registers. This must only be used to describe entities.,
