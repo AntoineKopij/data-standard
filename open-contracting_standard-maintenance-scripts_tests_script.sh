@@ -1,5 +1,5 @@
 # This is https://github.com/open-contracting/standard-maintenance-scripts/blob/c3b4fc9499852baed9fc0160638162aa0e61381f/tests/script.sh
-# with some lines commented out.
+# with some bits commented out.
 set -e
 
 # Lint Python
@@ -16,7 +16,7 @@ flake8 --max-line-length 119
 ## /tmp/bin/mdl --git-recurse --style /tmp/mdlrc.rb .
 #
 ## Validate CSV, JSON and JSON Schema
-#curl -s -S --retry 3 -o /tmp/test_csv.py $BASEDIR/tests/test_csv.py
+curl -s -S --retry 3 -o /tmp/test_csv.py $BASEDIR/tests/test_csv.py
 #curl -s -S --retry 3 -o /tmp/test_json.py $BASEDIR/tests/test_json.py
 #curl -s -S --retry 3 -o /tmp/test_readme.py $BASEDIR/tests/test_readme.py
-#py.test -rs --tb=line /tmp/test_csv.py /tmp/test_json.py /tmp/test_readme.py
+py.test -rs --tb=line /tmp/test_csv.py #/tmp/test_json.py /tmp/test_readme.py
